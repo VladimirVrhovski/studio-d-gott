@@ -501,6 +501,18 @@ iframe {
 
 /* temporary tests */
 
+/* Fade in animation css */
+
+.animation-hidden {
+	opacity: 0;
+	transform: translateY(30px);
+	transition-duration: 800ms;
+}
+.animation-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 /* Utility classes */
 
 .text-primary-400 {
