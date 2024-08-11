@@ -402,6 +402,7 @@ iframe {
 .footer-links-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: var(--size-800);
 }
 
 .footer-links {
