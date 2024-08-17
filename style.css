@@ -7,17 +7,18 @@
 	--clr-accent-400: #45bccb;
 	--clr-accent-100: #d7f4f6; */
 
-	/* --clr-primary-400: #242329;
-	--clr-neutral-900: #312e34;
-	--clr-neutral-200: #7d8390;
-	--clr-accent-400: #928481;
-	--clr-accent-100: #9e908d; */
+	--clr-primary-400: #292420;
+	--clr-neutral-900: #292621;
+	--clr-neutral-200: #8b857b;
+	--clr-accent-400: #b08d63;
+	--clr-accent-100: #b6a796;
+	--clr-neutral-200-05: rgba(139, 133, 123, 0.5);
 
-	--clr-primary-400: #17152b;
+	/* --clr-primary-400: #17152b;
 	--clr-neutral-900: #312e34;
 	--clr-neutral-200: #827594;
 	--clr-accent-400: #70657e;
-	--clr-accent-100: #a997c2;
+	--clr-accent-100: #a997c2; */
 
 	--fw-regular: 400;
 	--fw-semi-bold: 500;
@@ -131,6 +132,7 @@ select {
 body {
 	font-family: "Montserrat", "Courier New", Courier, monospace;
 	font-size: var(--fs-body);
+	color: var(--clr-primary-400);
 	background-color: var(--clr-accent-100);
 }
 
@@ -198,6 +200,34 @@ body {
 iframe {
 	width: 100%;
 	height: 100%;
+}
+
+/* Home/hero */
+
+.home {
+	display: grid;
+	place-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url(images/Balance2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.hero {
+	display: grid;
+	place-items: center;
+}
+
+.hero h1 {
+	font-style: italic;
+	padding: var(--size-300);
+	border: var(--size-100) solid var(--clr-neutral-900);
+	background-color: var(--clr-neutral-200-05);
 }
 
 /* main nav */
