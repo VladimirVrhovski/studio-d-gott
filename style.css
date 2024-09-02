@@ -175,6 +175,27 @@ body {
 	}
 }
 
+.diagonal-bg {
+	position: relative;
+	isolation: isolate;
+}
+.diagonal-bg::after {
+	content: "";
+	background: var(--clr-accent-400);
+	position: absolute;
+	z-index: -1;
+	inset: -50px;
+	transform: skewY(-5deg);
+}
+.diagonal-bg::before {
+	content: "";
+	background: var(--clr-neutral-200);
+	position: absolute;
+	z-index: -2;
+	inset: -50px;
+	transform: skewY(5deg);
+}
+
 .text-input {
 	border: none;
 	border-radius: 100vw;
@@ -211,7 +232,7 @@ iframe {
 	top: 0;
 	left: 0;
 	z-index: -1;
-	min-height: 100vh;
+	min-height: 100svh;
 	width: 100%;
 	background-image: url(images/Balance2.jpg);
 	background-size: cover;
@@ -241,6 +262,7 @@ iframe {
 	justify-content: flex-end;
 	align-items: center;
 	background-color: var(--clr-neutral-900);
+	box-shadow: 0 5px 10px var(--clr-primary-400);
 }
 .links-container {
 	display: flex;
@@ -289,6 +311,7 @@ iframe {
 }
 #sidebar-activate:checked ~ .links-container {
 	right: 0;
+	box-shadow: -5px 0 10px var(--clr-primary-400);
 }
 #sidebar-activate:checked ~ #overlay {
 	height: 100%;
@@ -653,6 +676,10 @@ iframe {
 
 .margin-top-900 {
 	margin-block-start: var(--size-900);
+}
+
+.margin-top-20vh {
+	margin-block-start: 20vh;
 }
 
 .flow * + * {
